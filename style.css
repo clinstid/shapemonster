@@ -1,0 +1,12 @@
+div#header {
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+div#content {
+    position: relative;
+    margin: 0px auto;
+    height: 700px;
+    width: 700px;
+}
