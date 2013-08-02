@@ -214,9 +214,6 @@ var board = {
         if (board.shape_index >= board.shapes.length) {
             board.shape_index = 0;
         }
-        console.log("Selected new shape %d %s", 
-                    board.shape_index, 
-                    board.shapes[board.shape_index]);
         board.cursor_image.move(board.shapes[board.shape_index]);
         board.redraw();
     },
