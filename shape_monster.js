@@ -55,9 +55,9 @@ $(document).ready(function() {
     var rect = new Kinetic.Rect({
         name: 'rect',
         x: 100,
-        y: 50,
-        width: 50,
-        height: 50,
+        y: 100,
+        width: 100,
+        height: 100,
         fill: 'red',
         stroke: 'black',
         strokeWidth: 2,
@@ -75,14 +75,17 @@ $(document).ready(function() {
                 height: 0
             });
             tween.play();
+            window.setTimeout(500, function() {
+                rect.hide();
+            });
         }
     });
 
     var circle = new Kinetic.Circle({
         name: 'circle',
         x: 200,
-        y: 75,
-        radius: 25,
+        y: 100,
+        radius: 50,
         fill: 'blue',
         stroke: 'black',
         strokeWidth: 2,
@@ -99,14 +102,17 @@ $(document).ready(function() {
                 radius: 0,
             });
             tween.play();
+            window.setTimeout(500, function() {
+                circle.hide();
+            });
         }
     });
 
     var triangle = new Kinetic.RegularPolygon({
         name: 'triangle',
         x: 300,
-        y: 75,
-        radius: 27,
+        y: 100,
+        radius: 52,
         sides: 3,
         fill: 'yellow',
         stroke: 'black',
@@ -124,6 +130,9 @@ $(document).ready(function() {
                 radius: 0,
             });
             tween.play();
+            window.setTimeout(500, function() {
+                triangle.hide();
+            });
         }
     });
 
