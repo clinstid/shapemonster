@@ -362,6 +362,41 @@
          mode="screen"
          in="result6" />
     </filter>
+    <filter
+       id="filter6386"
+       inkscape:label="Matte jelly"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="ABCs"
+       inkscape:menu-tooltip="Bulging, matte jelly covering"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix6388"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.85 0"
+         result="result0"
+         in="SourceGraphic" />
+      <feGaussianBlur
+         id="feGaussianBlur6390"
+         in="SourceAlpha"
+         stdDeviation="7" />
+      <feSpecularLighting
+         id="feSpecularLighting6392"
+         surfaceScale="5"
+         specularConstant="0.9"
+         specularExponent="25"
+         result="result1">
+        <feDistantLight
+           id="feDistantLight6394"
+           elevation="60"
+           azimuth="225" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite6396"
+         in2="result0"
+         operator="atop" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -370,7 +405,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
+     inkscape:zoom="1"
      inkscape:cx="179.53903"
      inkscape:cy="568.47485"
      inkscape:document-units="px"
@@ -472,7 +507,7 @@
        inkscape:export-ydpi="180.67999" />
     <path
        sodipodi:type="arc"
-       style="fill:#d45500;fill-opacity:1;stroke:url(#linearGradient5298)"
+       style="fill:#d45500;fill-opacity:1;stroke:url(#linearGradient5298);filter:url(#filter6386)"
        id="path3013-9"
        sodipodi:cx="165.15994"
        sodipodi:cy="428.59299"
