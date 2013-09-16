@@ -39,6 +39,9 @@ $(document).ready(function() {
         height: 700
     });
 
+    var monsterLayer = new Kinetic.Layer();
+    var shapeLayer = new Kinetic.Layer();
+
     var rectMonster = new Kinetic.Rect({
         name: 'rectMonster',
         x: 100,
@@ -50,27 +53,35 @@ $(document).ready(function() {
         strokeWidth: 2,
     });
 
-    var circleMonster = new Kinetic.Rect({
-        name: 'circleMonster',
-        x: 300,
-        y: 300,
-        width: 100,
-        height: 100,
-        fill: 'black',
-        stroke: 'black',
-        strokeWidth: 2,
-    });
+    var circleMonster = new Kinetic.Image();
+    var circleMonsterImage = new Image();
+    circleMonsterImage.onload = function() {
+        circleMonster.setName('circleMonster');
+        circleMonster.setX(300);
+        circleMonster.setY(200);
+        circleMonster.setImage(circleMonsterImage);
+        circleMonster.setWidth(200);
+        circleMonster.setHeight(400);
 
-    var triangleMonster = new Kinetic.Rect({
-        name: 'triangleMonster',
-        x: 500,
-        y: 300,
-        width: 100,
-        height: 100,
-        fill: 'black',
-        stroke: 'black',
-        strokeWidth: 2,
-    });
+        monsterLayer.add(circleMonster);
+        monsterLayer.draw();
+    };
+    circleMonsterImage.src = 'circlemonster.png';
+
+    var triangleMonster = new Kinetic.Image();
+    var triangleMonsterImage = new Image();
+    triangleMonsterImage.onload = function() {
+        triangleMonster.setName('triangleMonster');
+        triangleMonster.setX(500);
+        triangleMonster.setY(300);
+        triangleMonster.setImage(triangleMonsterImage);
+        triangleMonster.setWidth(200);
+        triangleMonster.setHeight(200);
+
+        monsterLayer.add(triangleMonster);
+        monsterLayer.draw();
+    };
+    triangleMonsterImage.src = 'trianglemonster.png';
 
     var rect = new Kinetic.Rect({
         name: 'rect',
@@ -107,13 +118,11 @@ $(document).ready(function() {
         draggable: true
     });
 
-    var monsterLayer = new Kinetic.Layer();
+    monsterLayer.add(triangleMonster);
     monsterLayer.add(rectMonster);
     monsterLayer.add(circleMonster);
-    monsterLayer.add(triangleMonster);
     stage.add(monsterLayer);
 
-    var shapeLayer = new Kinetic.Layer();
     shapeLayer.add(rect);
     shapeLayer.add(circle);
     shapeLayer.add(triangle);

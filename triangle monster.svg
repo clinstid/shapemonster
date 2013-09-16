@@ -16,7 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="triangle monster.svg">
+   sodipodi:docname="triangle monster.svg"
+   inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+   inkscape:export-xdpi="180.67999"
+   inkscape:export-ydpi="180.67999">
   <defs
      id="defs4">
     <linearGradient
@@ -37,18 +40,6 @@
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
          id="stop5565" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient5394">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop5396" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop5398" />
     </linearGradient>
     <linearGradient
        id="linearGradient5320">
@@ -98,24 +89,6 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5286"
-       id="linearGradient5282"
-       x1="135.8706"
-       y1="428.59299"
-       x2="194.44929"
-       y2="428.59299"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5286"
-       id="linearGradient5284"
-       x1="135.8706"
-       y1="428.59299"
-       x2="194.44929"
-       y2="428.59299"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient5292"
        id="linearGradient5298"
        x1="136.3706"
@@ -152,28 +125,6 @@
          offset="1"
          id="stop5398-5" />
     </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5394-9"
-       id="radialGradient5436"
-       cx="76.266518"
-       cy="570.39317"
-       fx="76.266518"
-       fy="570.39317"
-       r="5.3114978"
-       gradientTransform="matrix(1,0,0,0.87863717,0,69.22453)"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient5394"
-       id="radialGradient5438"
-       cx="76.266518"
-       cy="570.39317"
-       fx="76.266518"
-       fy="570.39317"
-       r="5.3114978"
-       gradientTransform="matrix(1,0,0,0.87863717,0,69.22453)"
-       gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient5442-0"
@@ -243,9 +194,9 @@
        width="1.3"
        y="-0.15"
        height="1.3"
-       inkscape:menu-tooltip="Felt like texture with color turbulence and slightly darker at the edges"
+       inkscape:menu-tooltip="Aquarelle paper effect which can be used for pictures as for objects"
        inkscape:menu="Textures"
-       inkscape:label="Felt"
+       inkscape:label="Rough paper"
        color-interpolation-filters="sRGB">
       <feGaussianBlur
          id="feGaussianBlur5621"
@@ -291,7 +242,58 @@
          in2="result91"
          operator="arithmetic"
          k1="1.5"
-         in="result2" />
+         in="result2"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4087" />
+      <feTurbulence
+         id="feTurbulence4089"
+         type="fractalNoise"
+         baseFrequency="0.04"
+         numOctaves="5"
+         seed="0"
+         result="result4"
+         in="fbSourceGraphic" />
+      <feDisplacementMap
+         id="feDisplacementMap4091"
+         in2="result4"
+         in="fbSourceGraphic"
+         yChannelSelector="G"
+         xChannelSelector="R"
+         scale="10"
+         result="result3" />
+      <feDiffuseLighting
+         id="feDiffuseLighting4093"
+         lighting-color="rgb(233,230,215)"
+         diffuseConstant="1"
+         surfaceScale="2"
+         result="result1"
+         in="result4">
+        <feDistantLight
+           id="feDistantLight4095"
+           azimuth="235"
+           elevation="40" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite4097"
+         in2="result1"
+         operator="in"
+         in="result3"
+         result="result2" />
+      <feComposite
+         id="feComposite4099"
+         in2="result1"
+         result="result5"
+         operator="arithmetic"
+         k1="1.7" />
+      <feBlend
+         id="feBlend4101"
+         in2="result3"
+         in="result5"
+         mode="normal" />
     </filter>
     <filter
        id="filter5765"
@@ -368,17 +370,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="251.13708"
-     inkscape:cy="548.16693"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="179.53903"
+     inkscape:cy="568.47485"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2560"
-     inkscape:window-height="1389"
-     inkscape:window-x="1920"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1608"
+     inkscape:window-height="1116"
+     inkscape:window-x="2167"
+     inkscape:window-y="123"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -395,19 +397,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       sodipodi:type="arc"
-       style="fill:#cccccc;fill-opacity:1;stroke:none"
-       id="path5787"
-       sodipodi:cx="212.5"
-       sodipodi:cy="469.86218"
-       sodipodi:rx="75.35714"
-       sodipodi:ry="72.14286"
-       d="m 287.85714,469.86218 a 75.35714,72.14286 0 1 1 -150.71428,0 75.35714,72.14286 0 1 1 150.71428,0 z"
-       transform="matrix(0.97393368,0,0,1.0841584,7.8605283,-47.399998)" />
     <g
        id="g5718"
-       style="fill:#008080;filter:url(#filter5765)">
+       style="fill:#008080;filter:url(#filter5765)"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999">
       <a
          id="a5715"
          style="fill:#008080">
@@ -424,18 +419,13 @@
          style="fill:#008080;fill-opacity:1;stroke:none" />
     </g>
     <path
-       sodipodi:type="arc"
        style="fill:#008000;fill-opacity:1;stroke:none;filter:url(#filter5619)"
+       d="m 213.8363,380.14864 c -34.63493,0.4199 -65.12986,27.94225 -72.5,61.125 -9.06081,35.09366 7.04872,75.635 39.4375,92.75 27.46533,15.64191 64.5566,10.13078 86.75,-12.25 28.46959,-26.7331 33.33086,-74.18818 11.48041,-106.55336 -13.92794,-21.77529 -39.08794,-35.99254 -65.16791,-35.07164 z"
        id="path5549"
-       sodipodi:cx="207.20753"
-       sodipodi:cy="462.30682"
-       sodipodi:rx="74.877556"
-       sodipodi:ry="79.423241"
-       d="m 282.08509,462.30682 a 74.877556,79.423241 0 1 1 -149.75511,0 74.877556,79.423241 0 1 1 149.75511,0 z"
-       transform="translate(8.5862966,-0.75761441)" />
+       inkscape:connector-curvature="0" />
     <path
        sodipodi:type="star"
-       style="fill:#ff0000;fill-opacity:0.89803922000000003;stroke:#000000;stroke-opacity:1;opacity:1;filter:url(#filter5376)"
+       style="fill:#ffff00;fill-opacity:0.89803922000000003;stroke:#000000;stroke-opacity:1;opacity:1;filter:url(#filter5376)"
        id="path3011"
        sodipodi:sides="3"
        sodipodi:cx="211.12189"
@@ -450,27 +440,36 @@
        d="m 178.29193,482.13105 65.42907,-0.39984 -32.36826,56.86316 z"
        inkscape:transform-center-x="0.1154251"
        inkscape:transform-center-y="9.343911"
-       transform="translate(2.020305,-18.182746)" />
+       transform="translate(2.020305,-18.182746)"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        sodipodi:type="arc"
-       style="fill:#ececec;fill-opacity:0.89803922000000003;stroke:url(#linearGradient5282);stroke-opacity:1"
+       style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-opacity:0.53140098"
        id="path3013"
        sodipodi:cx="165.15994"
        sodipodi:cy="428.59299"
        sodipodi:rx="28.789347"
        sodipodi:ry="25.75889"
        d="m 193.94929,428.59299 a 28.789347,25.75889 0 1 1 -57.57869,0 28.789347,25.75889 0 1 1 57.57869,0 z"
-       transform="translate(27.779195,0.50507627)" />
+       transform="translate(27.779195,0.50507627)"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        transform="translate(72.225906,-1.5670776e-6)"
        sodipodi:type="arc"
-       style="fill:#ececec;fill-opacity:0.89803922000000003;stroke:url(#linearGradient5284);stroke-opacity:1"
+       style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-opacity:0.53140098"
        id="path3013-4"
        sodipodi:cx="165.15994"
        sodipodi:cy="428.59299"
        sodipodi:rx="28.789347"
        sodipodi:ry="25.75889"
-       d="m 193.94929,428.59299 a 28.789347,25.75889 0 1 1 -57.57869,0 28.789347,25.75889 0 1 1 57.57869,0 z" />
+       d="m 193.94929,428.59299 a 28.789347,25.75889 0 1 1 -57.57869,0 28.789347,25.75889 0 1 1 57.57869,0 z"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        sodipodi:type="arc"
        style="fill:#d45500;fill-opacity:1;stroke:url(#linearGradient5298)"
@@ -480,7 +479,10 @@
        sodipodi:rx="28.789347"
        sodipodi:ry="25.75889"
        d="m 193.94929,428.59299 a 28.789347,25.75889 0 1 1 -57.57869,0 28.789347,25.75889 0 1 1 57.57869,0 z"
-       transform="matrix(0.33167668,0,0,0.6452073,156.34218,178.83071)" />
+       transform="matrix(0.33167668,0,0,0.6452073,156.34218,178.83071)"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        sodipodi:type="arc"
        style="fill:#ff6600;fill-opacity:0.89803922;stroke:#000000;stroke-opacity:1"
@@ -489,7 +491,10 @@
        sodipodi:cy="420.25922"
        sodipodi:rx="8.3337584"
        sodipodi:ry="7.8286824"
-       d="m 237.89092,420.25922 a 8.3337584,7.8286824 0 1 1 -16.66752,0 8.3337584,7.8286824 0 1 1 16.66752,0 z" />
+       d="m 237.89092,420.25922 a 8.3337584,7.8286824 0 1 1 -16.66752,0 8.3337584,7.8286824 0 1 1 16.66752,0 z"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        transform="translate(-46.719549,0.25254871)"
        sodipodi:type="arc"
@@ -499,10 +504,13 @@
        sodipodi:cy="420.25922"
        sodipodi:rx="8.3337584"
        sodipodi:ry="7.8286824"
-       d="m 237.89092,420.25922 a 8.3337584,7.8286824 0 1 1 -16.66752,0 8.3337584,7.8286824 0 1 1 16.66752,0 z" />
+       d="m 237.89092,420.25922 a 8.3337584,7.8286824 0 1 1 -16.66752,0 8.3337584,7.8286824 0 1 1 16.66752,0 z"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        sodipodi:type="star"
-       style="fill:#ececec;fill-opacity:1;stroke:url(#radialGradient5438);stroke-opacity:1"
+       style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-opacity:0.42028984"
        id="path5380"
        sodipodi:sides="3"
        sodipodi:cx="76.266518"
@@ -516,11 +524,14 @@
        inkscape:randomized="0"
        d="m 76.266518,574.56005 -4.811498,-8.33376 9.622995,0 z"
        inkscape:transform-center-y="1.3889598"
-       transform="translate(119.70308,-102.27795)" />
+       transform="translate(119.70308,-102.27795)"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
     <path
        transform="translate(152.78557,-102.65677)"
        sodipodi:type="star"
-       style="fill:#ececec;fill-opacity:1;stroke:url(#radialGradient5436);stroke-opacity:1"
+       style="fill:#ececec;fill-opacity:1;stroke:#000000;stroke-opacity:0.42028984"
        id="path5380-1"
        sodipodi:sides="3"
        sodipodi:cx="76.266518"
@@ -533,6 +544,29 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 76.266518,574.56005 -4.811498,-8.33376 9.622995,0 z"
-       inkscape:transform-center-y="1.3889598" />
+       inkscape:transform-center-y="1.3889598"
+       inkscape:export-filename="/home/clinstid/src/shapemonster/trianglemonster.png"
+       inkscape:export-xdpi="180.67999"
+       inkscape:export-ydpi="180.67999" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000080;fill-opacity:1;stroke:#000000;stroke-opacity:0.42028988"
+       id="path4011"
+       sodipodi:cx="58.392857"
+       sodipodi:cy="408.96933"
+       sodipodi:rx="2.3214285"
+       sodipodi:ry="2.3214285"
+       d="m 60.714285,408.96933 a 2.3214285,2.3214285 0 1 1 -4.642857,0 2.3214285,2.3214285 0 1 1 4.642857,0 z"
+       transform="translate(122.14286,9.6428572)" />
+    <path
+       transform="translate(169.46429,9.821425)"
+       sodipodi:type="arc"
+       style="fill:#000080;fill-opacity:1;stroke:#000000;stroke-opacity:0.42028988"
+       id="path4011-2"
+       sodipodi:cx="58.392857"
+       sodipodi:cy="408.96933"
+       sodipodi:rx="2.3214285"
+       sodipodi:ry="2.3214285"
+       d="m 60.714285,408.96933 a 2.3214285,2.3214285 0 1 1 -4.642857,0 2.3214285,2.3214285 0 1 1 4.642857,0 z" />
   </g>
 </svg>
